@@ -3,8 +3,9 @@ const app = express();
 const routerManager = require("./router/routerManager.js");
 
 
-const checkAuth = require("./auth/checkAuth");
-app.use("/api/v1", checkAuth);
+
+//const checkAuth = require("./auth/checkAuth");
+//app.use("/api/v1", checkAuth);
 
 app.use("/api/v1", routerManager);
 
