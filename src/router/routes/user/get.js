@@ -3,7 +3,7 @@ const db = require("../../../database.js");
 
 router.get("/users/:id", async(req, res, next) => {
 
-    const response = await db.execute("select * from miyuki_shiba.user");
+    const response = await db.execute("select * from heroku_9cfd7c9fb7b766b.user");
     if (!Number.isInteger(Number.parseInt(id))) {
         return res.status(400).json({
             message: "ID não é um numéro"
