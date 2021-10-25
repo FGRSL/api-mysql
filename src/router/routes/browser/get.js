@@ -2,7 +2,7 @@
 const db = require("../../../database.js");
 
 
-router.get("/about", async( req, res, next) =>{
+router.get("/home", async( req, res, next) =>{
     res.send("site teste!!!");
 })
 

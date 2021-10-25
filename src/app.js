@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const routerManager = require("./router/routerManager.js");
-const bootstrap_path = require("path");
 
 const checkAuth = require("./auth/checkAuth");
 
@@ -17,8 +16,5 @@ app.use("/", async(req, res, next) => {
         message: "not found"
     });
 });
-
-app.use(express.static(bootstrap_path.join(__dirname, "public")));
-
 
 module.exports = app;
