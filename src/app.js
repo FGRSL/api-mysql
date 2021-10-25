@@ -8,8 +8,9 @@ app.use("/api/v1", checkAuth);
 
 app.use("/api/v1", routerManager);
 
-app.get("/", async (req, res, next) => {
-    
+app.use("/", async(req, res, next) => {
+    res.status(404).json({
+        message: "not found"
+    });
 });
-
 module.exports = app;

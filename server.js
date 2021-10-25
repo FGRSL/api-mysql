@@ -10,8 +10,8 @@ async function inicialize() {
     const app = require("./src/app.js");
     const server = http.createServer(app);
 
-    
-    server.listen(3000, () => {
+
+    server.listen(process.env.PORT || 5000, () => {
         console.log("|-----------------------------------------------------------------------------------------------------------------|");
         console.log("|- BANCO DE DADOS ONLINE!" + " HORARIO DE INICIALIZAÇÃO " + new Date() + "-|");
         console.log("|-----------------------------------------------------------------------------------------------------------------|");
